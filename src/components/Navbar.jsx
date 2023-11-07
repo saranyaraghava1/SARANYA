@@ -1,13 +1,15 @@
 import React from "react";
 
-const Navbar = () => {
+const NavBar = () => {
   return (
     <div>
-      <frame>
-        <h1>Saranya</h1>
-      </frame>
+      <hr></hr>
+      <h1 style={{ backgroundColor: "lavender", fontSize: "30px" }}>
+        Your Name
+      </h1>
+      <hr></hr>
     </div>
   );
 };
 
-export default Navbar;
+export default NavBar;
