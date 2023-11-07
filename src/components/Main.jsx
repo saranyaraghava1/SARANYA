@@ -3,8 +3,10 @@ import React from "react";
 const Main = () => {
   return (
     <div>
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiIDZZ2zobYDZVnOsSp8v5FENYIo7QKNyIdLYyL5xLAoGJVNvTmtIRkt6vW_FKDmOnt98&usqp=CAU"></img>
       <center>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiIDZZ2zobYDZVnOsSp8v5FENYIo7QKNyIdLYyL5xLAoGJVNvTmtIRkt6vW_FKDmOnt98&usqp=CAU"></img>
+        <br></br>
+        <br></br>
         <label for="name">Email Id: &emsp;</label>
         <input id="name" type="box" placeholder="Email ID"></input>
         <br></br>
@@ -14,6 +16,9 @@ const Main = () => {
         <br></br>
         <br></br>
         <button>Submit</button>
+        <br></br>
+        <br></br>
+        <br></br>
       </center>
     </div>
   );
