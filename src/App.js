@@ -13,20 +13,11 @@
   //);
 //}
 import  "./App.css";
-//import Counter from "./Day-3/Counter";
-//function App() {
-  //return (
-    //<div className="flex space-x-4 my-4">
-       //<Counter />
-    //</div>
-  //);
-//
-//};
 import { useState } from "react";
-import cart from "./CoffeeShop/cart";
+import Cart from "./CoffeeShop/Cart";
 import Menu from "./CoffeeShop/Menu";
 import Navbar from "./CoffeeShop/Navbar";
-import categories from "./CoffeeShop/product";
+import categories from "./CoffeeShop/products";
 
 function App() {
   const [activeCategory, setActiveCategory] = useState(categories[0]);
@@ -36,16 +27,29 @@ function App() {
     setActiveCategory(categories[index]);
   };
 
-  const handleAddTocart = (item) => {
+  const handleAddToCart = (item) => {
     setProducts([...products, item]);
   };
 
   return (
     <div className="space-y-4 my-4">
       <Navbar category={categories} handleClick={handleClick} />
-      <Menu activeCategory={activeCategory} handleAddTocart={handleAddTocart} />
-      <cart products={products} />
+      <Menu activeCategory={activeCategory} handleAddToCart={handleAddToCart} />
+      <Cart products={products} />
     </div>
   );
 }
+
 export default App;
+
+//import Counter from "./Day-3/Counter";
+//function App() {
+  //return (
+    //<div className="flex space-x-4 my-4">
+       //<Counter />
+    //</div>
+  //);
+//
+//};
+
+
