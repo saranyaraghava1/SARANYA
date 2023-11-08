@@ -1,4 +1,4 @@
-import  "./App.css";
+//import  "./App.css";
 //import Navbar from "./components/Navbar";
 //import Main from "./components/Main";
 //import Footer from "./components/Footer";
@@ -12,6 +12,7 @@ import  "./App.css";
       //</div>
   //);
 //}
+import  "./App.css";
 import Counter from "./Day-3/Counter";
 function App() {
   return (
