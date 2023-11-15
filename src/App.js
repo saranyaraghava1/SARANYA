@@ -1,5 +1,18 @@
 import  "./App.css";
-import Navbar from "./components/Navbar";
+import React from 'react';
+import ToggleMessage from "./Day-3/ToggleMessage";
+
+function App() {
+  return (
+    <div>
+      <h1>Toggle Message Example</h1>
+      <ToggleMessage />
+    </div>
+  );
+}
+export default App;
+
+/*import Navbar from "./components/Navbar";
 import Main from "./components/Main";
 import Footer from "./components/Footer";
 function App() {
