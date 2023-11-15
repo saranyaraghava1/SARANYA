@@ -1,7 +1,18 @@
 import  "./App.css";
 import React from 'react';
-import ToggleMessage from "./Day-3/ToggleMessage";
+import GokuTransformation from "./Day-3/GokuTransformation";
+function App() {
+  return (
+    <div>
+      <GokuTransformation />
+    </div>
+  );
+}
 
+export default App;
+
+/*import React from 'react';
+import ToggleMessage from "./Day-3/ToggleMessage";
 function App() {
   return (
     <div>
