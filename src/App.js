@@ -13,11 +13,21 @@
 //}
 //export default App;
 import  "./App.css";
-import HelloWorld from "./Day-2/HelloWorld";
+import Style from "./Day-2/Style";
+function App(){
+  return(
+    <div>
+      <Style/>
+    </div>
+  );
+}
+export default App;
+/*import HelloWorld from "./Day-2/HelloWorld";
 function App(){
   return(
     <div>
       <HelloWorld/>
+
     </div>
   );
 }
