@@ -15,6 +15,10 @@ const Main = () => {
         <input id="na" type="Password" placeholder="Password"></input>
         <br></br>
         <br></br>
+        <label for="Feedback">Feedback: &emsp;</label>
+        <textarea id="Feedback" name="Feedback" rows="4" cols="50"></textarea>
+        <br></br>
+        <br></br>
         <button>Submit</button>
         <br></br>
         <br></br>
