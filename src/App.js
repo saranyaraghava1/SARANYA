@@ -1,5 +1,66 @@
-import  "./App.css";
-import React from 'react';
+import  "./App.css";import React from 'react';
+import Form from './Day-2/Form';
+const App = () => {
+  return (
+    <div>
+      <h1>BasicForm</h1>
+      <Form />
+    </div>
+  );
+};
+export default App;
+
+/*import React from 'react';
+import LoginPage from './FreelanceFinder/LoginPage';
+function App() {
+  return (
+    <div>
+      <h1><center>Login</center></h1>
+      <LoginPage />
+    </div>
+  );
+}
+export default App;
+/*import React from 'react';
+import MaterialButton from './Day-4/MaterialButton';
+function App() {
+  return (
+    <div>
+      <h1>React Mateirial-UI Login Example</h1>
+      <MaterialButton />
+    </div>
+  );
+}
+export default App;
+/*import Effects from "./components/Effects";
+function App() {
+  return (
+    <>
+      <Effects />
+    </>
+  );
+}
+export default App;
+/*import React, { useState } from 'react';
+import LoginPage from "./FreelanceFinder/LoginPage";
+import JobList from './FreelanceFinder/JobList';
+function App() {
+  const [jobs, setJobs] = useState([]);
+
+  const addJob = (job) => {
+    setJobs([...jobs, job]);
+  };
+
+  return (
+    <div>
+      <h1>Freelance Finder</h1>
+      <LoginPage addJob={addJob} />
+      <JobList jobs={jobs} />
+    </div>
+  );
+}
+export default App;
+/*import React from 'react';
 import MaterialButton from './Day-4/MaterialButton';
 function App() {
   return (
@@ -9,9 +70,7 @@ function App() {
     </div>
   );
 }
-
 export default App;
-
 /*import React from 'react';
 import FruitSurvey from "./Day-4/FruitSurvey";
 function App() {
@@ -23,7 +82,6 @@ function App() {
   );
 }
 export default App;
-
 /*import React from 'react';
 import GokuTransformation from "./Day-3/GokuTransformation";
 function App() {
@@ -33,9 +91,7 @@ function App() {
     </div>
   );
 }
-
 export default App;
-
 /*import React from 'react';
 import ToggleMessage from "./Day-3/ToggleMessage";
 function App() {
@@ -47,7 +103,6 @@ function App() {
   );
 }
 export default App;
-
 /*import Navbar from "./components/Navbar";
 import Main from "./components/Main";
 import Footer from "./components/Footer";

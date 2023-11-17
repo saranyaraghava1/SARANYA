@@ -1,4 +1,3 @@
-// LoginButton.js
 import React, { useState } from "react";
 import Button from "@mui/material/Button";
 import Dialog from "@mui/material/Dialog";
@@ -6,7 +5,7 @@ import DialogTitle from "@mui/material/DialogTitle";
 import DialogContent from "@mui/material/DialogContent";
 import DialogActions from "@mui/material/DialogActions";
 import TextField from "@mui/material/TextField";
-function MaterialButton() {
+function LoginPage() {
   const [open, setOpen] = useState(false);
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -24,19 +23,29 @@ function MaterialButton() {
   const handleUsernameChange = (event) => {
     setUsername(event.target.value);
   };
-
   const handlePasswordChange = (event) => {
     setPassword(event.target.value);
   };
   return (
-    <div>
+    <div
+      style={{
+        backgroundImage: open
+          ? `url('https://as1.ftcdn.net/v2/jpg/00/42/30/94/1000_F_42309483_OllBIUXnjeLYxkG7jNTdeLQuGtCa04MF.jpg')`
+          : "none",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        height: "100vh", // Adjust the height as needed
+      }}
+    >
       <center>
         <Button variant="contained" onClick={handleOpen} data-testid="login">
           Login
         </Button>
       </center>
       <Dialog open={open} onClose={handleClose}>
-        <DialogTitle>Login</DialogTitle>
+        <DialogTitle style={{ fontWeight: "bold", fontSize: "30px" }}>
+          <center>LOGIN</center>
+        </DialogTitle>
         <DialogContent>
           <TextField
             autoFocus
@@ -72,4 +81,4 @@ function MaterialButton() {
     </div>
   );
 }
-export default MaterialButton;
+export default LoginPage;

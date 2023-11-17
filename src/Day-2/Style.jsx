@@ -7,7 +7,7 @@ const Style = () => {
         backgroundColor: "lightBlue",
         padding: "10px",
         border: "1px solid blue",
-        borderRadius: "5px",
+        borderRadius: "50px",
       }}
     >
       <h1 style={{ color: "green" }}>
