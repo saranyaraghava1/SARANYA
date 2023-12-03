@@ -1,4 +1,153 @@
-import React, { useState, useEffect } from 'react';
+import React, { useRef } from 'react';
+function App() {
+  const usernameRef = useRef(null);
+  const emailRef = useRef(null);
+  const passwordRef = useRef(null);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const username = usernameRef.current.value;
+    const email = emailRef.current.value;
+    const password = passwordRef.current.value;
+    console.log('Form submitted:', { username, email, password });
+    usernameRef.current.value = '';
+    emailRef.current.value = '';
+    passwordRef.current.value = '';
+  };
+
+  return (
+    <div>
+      <center>
+      <h1>Form with Refs</h1>
+      <form onSubmit={handleSubmit} style={{backgroundColor:"pink",height:"200px",width:"400px"}}>
+        <div>
+          <label>Username:</label>
+          <input type="text" ref={usernameRef} />
+        </div>
+        <br></br>
+        <div>
+          <label>Email:</label>
+          <input type="text" ref={emailRef} />
+        </div>
+        <br></br>
+        <div>
+          <label>Password:</label>
+          <input type="password" ref={passwordRef} />
+        </div>
+        <br></br>
+        <button type="submit">Submit</button>
+      </form>
+      </center>
+    </div>
+  );
+}
+
+export default App;
+
+/*import React, { createContext, useContext, useState } from 'react';
+
+const FontContext = createContext();
+
+const FontProvider = ({ children }) => {
+  const [fontSize, setFontSize] = useState('16px');
+
+  const toggleFontSize = () => {
+    setFontSize((prevSize) => (prevSize === '16px' ? '20px' : '16px'));
+  };
+
+  return (
+    <FontContext.Provider value={{ fontSize, toggleFontSize }}>
+      {children}
+    </FontContext.Provider>
+  );
+};
+
+const useFont = () => {
+  return useContext(FontContext);
+};
+
+const FontToggleComponent = () => {
+  const { fontSize, toggleFontSize } = useFont();
+
+  return (
+    <div>
+      <p style={{ fontSize }}>This text has a dynamic font size!</p>
+      <button onClick={toggleFontSize}>Toggle Font Size</button>
+    </div>
+  );
+};
+
+function App() {
+  return (
+    <div>
+      <h1>Font Toggle Application</h1>
+      <FontProvider>
+        <FontToggleComponent />
+      </FontProvider>
+    </div>
+  );
+}
+
+export default App;
+
+/*import React, { useState, useEffect } from 'react';
+import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from '@mui/material';
+
+const App = () => {
+  const [users, setUsers] = useState([]);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    // Fetch users from the JSONPlaceholder API
+    fetch('https://jsonplaceholder.typicode.com/users')
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return response.json();
+      })
+      .then((data) => setUsers(data))
+      .catch((error) => {
+        console.error('Error fetching users:', error);
+        setError('Error fetching users. Please try again later.');
+      });
+  }, []); // Empty dependency array to run the effect only once
+
+  if (error) {
+    return <div>{error}</div>;
+  }
+
+  return (
+    <div>
+      <h1>User List</h1>
+      <TableContainer component={Paper}>
+        <Table>
+          <TableHead>
+            <TableRow>
+              <TableCell>ID</TableCell>
+              <TableCell>Name</TableCell>
+              <TableCell>Email</TableCell>
+              <TableCell>Username</TableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {users.map((user) => (
+              <TableRow key={user.id}>
+                <TableCell>{user.id}</TableCell>
+                <TableCell>{user.name}</TableCell>
+                <TableCell>{user.email}</TableCell>
+                <TableCell>{user.username}</TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </TableContainer>
+    </div>
+  );
+};
+
+export default App;
+
+/*import React, { useState, useEffect } from 'react';
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from '@mui/material';
 
 const App = () => {
