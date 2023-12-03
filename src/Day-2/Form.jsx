@@ -16,7 +16,6 @@ const Form = () => {
     e.preventDefault();
     console.log("Form Data:", formData);
   };
-
   return (
     <form onSubmit={handleSubmit}>
       <label htmlFor="name">Name:</label>
@@ -43,7 +42,6 @@ const Form = () => {
       <br></br>
       <br></br>
       <br></br>
-
       <label htmlFor="message">Message:</label>
       <textarea
         id="message"
@@ -55,10 +53,8 @@ const Form = () => {
       <br></br>
       <br></br>
       <br></br>
-
       <button type="submit">Submit</button>
     </form>
   );
 };
-
 export default Form;

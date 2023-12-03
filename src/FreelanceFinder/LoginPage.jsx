@@ -1,3 +1,4 @@
+// LoginButton.js
 import React, { useState } from "react";
 import Button from "@mui/material/Button";
 import Dialog from "@mui/material/Dialog";
@@ -23,29 +24,19 @@ function LoginPage() {
   const handleUsernameChange = (event) => {
     setUsername(event.target.value);
   };
+
   const handlePasswordChange = (event) => {
     setPassword(event.target.value);
   };
   return (
-    <div
-      style={{
-        backgroundImage: open
-          ? `url('https://as1.ftcdn.net/v2/jpg/00/42/30/94/1000_F_42309483_OllBIUXnjeLYxkG7jNTdeLQuGtCa04MF.jpg')`
-          : "none",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        height: "100vh", // Adjust the height as needed
-      }}
-    >
+    <div>
       <center>
         <Button variant="contained" onClick={handleOpen} data-testid="login">
           Login
         </Button>
       </center>
       <Dialog open={open} onClose={handleClose}>
-        <DialogTitle style={{ fontWeight: "bold", fontSize: "30px" }}>
-          <center>LOGIN</center>
-        </DialogTitle>
+        <DialogTitle>Login</DialogTitle>
         <DialogContent>
           <TextField
             autoFocus
